@@ -4,11 +4,13 @@ import "./components.css";
 const Square = ({ border, value, event }) => {
   return (
     <div
-      className={`item p-4 ${border}`}
+      className={`item p-3 ${border}`}
       style={{ height: "100px", width: "100px", borderRadius: 2 }}
-      onClick={event}
+      onClick={value ? null : event}
     >
-      <h1 className="text-light">{value}</h1>
+      <h1 className="text-light" style={{ fontWeight: 400, fontSize: 50 }}>
+        {value}
+      </h1>
     </div>
   );
 };

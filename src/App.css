@@ -4,7 +4,7 @@
   width: 100vw;
   scroll-behavior: smooth;
   transition: all 2s ease-in-out;
-  animation: bg-effects infinite 20s linear;
+  animation: bg-effects infinite 50s;
 }
 
 .App-logo {
@@ -46,17 +46,32 @@
   0% {
     background-color: #001233;
   }
-  20% {
+  10% {
     background-color: #001845;
   }
-  40% {
+  20% {
     background-color: #002855;
   }
-  60% {
+  30% {
     background-color: #023e7d;
   }
-  80% {
+  40% {
     background-color: #0353a4;
+  }
+  50% {
+    background-color: #606c38;
+  }
+  60% {
+    background-color: #283618;
+  }
+  70% {
+    background-color: #40916c;
+  }
+  80% {
+    background-color: #f77f00;
+  }
+  90% {
+    background-color: #f3722c;
   }
   100% {
     background-color: #001233;
