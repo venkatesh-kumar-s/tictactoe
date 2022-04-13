@@ -8,7 +8,10 @@ const Square = ({ border, value, event }) => {
       style={{ height: "100px", width: "100px", borderRadius: 2 }}
       onClick={value ? null : event}
     >
-      <h1 className="text-light" style={{ fontWeight: 400, fontSize: 50 }}>
+      <h1
+        className="text-light no-select"
+        style={{ fontWeight: 400, fontSize: 50 }}
+      >
         {value}
       </h1>
     </div>
