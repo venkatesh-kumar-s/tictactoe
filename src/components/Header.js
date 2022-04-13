@@ -1,4 +1,5 @@
 import React from "react";
+import "./components.css";
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
         color: "whitesmoke",
       }}
     >
-      <p className="display-4 m-auto" style={{ fontWeight: 400 }}>
+      <p className="display-4 m-auto no-select" style={{ fontWeight: 400 }}>
         Tic Tac Toe
       </p>
     </div>
