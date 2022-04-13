@@ -1,0 +1,26 @@
+.border-b-r {
+  border-bottom: 4px solid lightblue;
+  border-right: 4px solid lightblue;
+}
+.border-b-l {
+  border-bottom: 4px solid lightblue;
+  border-left: 4px solid lightblue;
+}
+.border-b {
+  border-bottom: 4px solid lightblue;
+}
+.border-r {
+  border-right: 4px solid lightblue;
+}
+.border-l {
+  border-left: 4px solid lightblue;
+}
+.border-l-t-r {
+  border-left: 4px solid lightblue;
+  border-top: 4px solid lightblue;
+  border-right: 4px solid lightblue;
+}
+
+.item:hover {
+  background-color: #11111130;
+}
