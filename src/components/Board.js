@@ -15,14 +15,6 @@ const Board = () => {
     setIsX(!isX);
   };
 
-  useEffect(() => {
-    const result = handleWinner();
-    if (result) {
-      alert(result + " won the game.....!!!1");
-      setState(values);
-    }
-  }, [state]);
-
   const handleWinner = () => {
     const lines = [
       [0, 1, 2],
@@ -42,6 +34,14 @@ const Board = () => {
     }
     return null;
   };
+
+  useEffect(() => {
+    const result = handleWinner();
+    if (result) {
+      alert(result + " won the game.....!!!1");
+      setState(values);
+    }
+  }, [state]);
 
   return (
     <div className="d-flex flex-column justify-content-center align-items-center">
