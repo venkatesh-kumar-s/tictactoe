@@ -34,3 +34,8 @@
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome and Opera */
 }
+
+.modal-content {
+  border: 0px !important;
+  overflow: hidden;
+}
