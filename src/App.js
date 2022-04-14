@@ -38,15 +38,15 @@ function App() {
         visible: false,
       },
       sound: {
-        enabled: false,
+        enabled: true,
         files: [
           "https://fireworks.js.org/sounds/explosion0.mp3",
           "https://fireworks.js.org/sounds/explosion1.mp3",
           "https://fireworks.js.org/sounds/explosion2.mp3",
         ],
         volume: {
-          min: 1,
-          max: 2,
+          min: 5,
+          max: 10,
         },
       },
       mouse: {
@@ -56,14 +56,6 @@ function App() {
       },
     },
   });
-
-  const toggleSound = () => {
-    setOptions({
-      sound: {
-        enabled: true,
-      },
-    });
-  };
 
   useEffect(() => {
     setEnabled(false);
@@ -75,7 +67,7 @@ function App() {
           enabled={enabled}
           options={options}
           style={{
-            position: "fixed",
+            position: "absolute",
             top: 0,
             left: 0,
             width: "100%",
@@ -84,12 +76,7 @@ function App() {
       )}
       <Header />
       <div style={{ display: "grid", placeContent: "center", height: "80vh" }}>
-        <Board
-          enableSound={toggleSound}
-          setEnabled={setEnabled}
-          setBlast={setBlast}
-          blast={blast}
-        />
+        <Board setEnabled={setEnabled} setBlast={setBlast} blast={blast} />
       </div>
     </div>
   );

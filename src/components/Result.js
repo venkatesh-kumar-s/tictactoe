@@ -12,7 +12,7 @@ const Result = ({ winner }) => {
         color: "whitesmoke",
       }}
     >
-      <audio src={hurray} autoPlay />
+      {/* <audio src={hurray} autoPlay /> */}
       <p className="display-1" style={{ fontWeight: 600 }}>
         {winner}
       </p>

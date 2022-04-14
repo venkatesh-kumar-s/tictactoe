@@ -4,7 +4,7 @@ import Square from "./Square";
 
 const values = ["", "", "", "", "", "", "", "", ""];
 
-const Board = ({ enableSound, setEnabled, setBlast, blast }) => {
+const Board = ({ setEnabled, setBlast, blast }) => {
   const [state, setState] = useState(values);
   const [isX, setIsX] = useState(false);
   const [winner, setWinner] = useState();
@@ -44,8 +44,6 @@ const Board = ({ enableSound, setEnabled, setBlast, blast }) => {
       if (result) {
         navigator.vibrate(100);
         setBlast(true);
-
-        enableSound();
         setWinner(result);
         setState(values);
       }
