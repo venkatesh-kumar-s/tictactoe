@@ -8,6 +8,7 @@ const Board = () => {
   const [state, setState] = useState(values);
   const [isX, setIsX] = useState(false);
   const [isDone, setIsDone] = useState(false);
+  const [winner, setWinner] = useState();
 
   const handleTurns = (e) => {
     navigator.vibrate(30);
@@ -39,8 +40,11 @@ const Board = () => {
     };
 
     const result = handleWinner();
+
     setTimeout(() => {
       if (result) {
+        navigator.vibrate(100);
+        setWinner(result);
         setIsDone(true);
         setState(values);
       }
@@ -49,7 +53,7 @@ const Board = () => {
 
   return (
     <div className="d-flex flex-column justify-content-center align-items-center">
-      <Result show={isDone} toggle={() => setIsDone(!isDone)} />
+      <Result show={isDone} toggle={() => setIsDone(!isDone)} winner={winner} />
       <div className="d-flex">
         <Square
           border={"border-b-r"}
