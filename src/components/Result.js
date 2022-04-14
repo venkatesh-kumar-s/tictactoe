@@ -7,7 +7,7 @@ const Result = ({ winner }) => {
     <div
       className="p-5"
       style={{
-        border: "3px solid #00000099",
+        border: "3px solid whitesmoke",
         borderRadius: 10,
         color: "whitesmoke",
       }}
