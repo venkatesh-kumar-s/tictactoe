@@ -50,6 +50,7 @@ const Board = ({ setEnabled, setBlast, blast }) => {
       } else {
         if (!state.includes("")) {
           setDraw(true);
+          navigator.vibrate(100);
         }
       }
     }, 300);
@@ -58,7 +59,16 @@ const Board = ({ setEnabled, setBlast, blast }) => {
   return (
     <>
       {blast ? (
-        <Result winner={winner} />
+        <>
+          <Result winner={winner} />
+          <button
+            className="btn btn-light mt-5"
+            style={{ zIndex: 100 }}
+            onClick={() => (setState(values), setBlast(false))}
+          >
+            Play Again
+          </button>
+        </>
       ) : isDraw ? (
         <>
           <Result winner="Draw" />
