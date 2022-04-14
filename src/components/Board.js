@@ -43,7 +43,7 @@ const Board = ({ setEnabled, setBlast, blast }) => {
     result && setEnabled(true);
     setTimeout(() => {
       if (result) {
-        navigator.vibrate(100);
+        navigator.vibrate(200);
         setBlast(true);
         setWinner(result);
         setState(values);
