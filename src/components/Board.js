@@ -8,6 +8,7 @@ const Board = ({ setEnabled, setBlast, blast }) => {
   const [state, setState] = useState(values);
   const [isX, setIsX] = useState(false);
   const [winner, setWinner] = useState();
+  const [isDraw, setDraw] = useState(false);
 
   const handleTurns = (e) => {
     navigator.vibrate(30);
@@ -46,6 +47,10 @@ const Board = ({ setEnabled, setBlast, blast }) => {
         setBlast(true);
         setWinner(result);
         setState(values);
+      } else {
+        if (!state.includes("")) {
+          setDraw(true);
+        }
       }
     }, 300);
   }, [state]);
@@ -54,6 +59,16 @@ const Board = ({ setEnabled, setBlast, blast }) => {
     <>
       {blast ? (
         <Result winner={winner} />
+      ) : isDraw ? (
+        <>
+          <Result winner="Draw" />
+          <button
+            className="btn btn-light mt-5"
+            onClick={() => (setState(values), setDraw(false))}
+          >
+            Play Again
+          </button>
+        </>
       ) : (
         <div className="d-flex flex-column justify-content-center align-items-center">
           <div className="d-flex">

@@ -45,8 +45,8 @@ function App() {
           "https://fireworks.js.org/sounds/explosion2.mp3",
         ],
         volume: {
-          min: 5,
-          max: 10,
+          min: 15,
+          max: 20,
         },
       },
       mouse: {
